@@ -12,22 +12,18 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('buses', function (Blueprint $table) {
-            $table->id();
+       $table->id();
 
-            $table->foreignId('bus_operator_id')
-                ->constrained('bus_operators')
-                ->cascadeOnDelete();
+    $table->string('bus_number')->unique();
+    $table->string('bus_name')->nullable();
 
-            $table->string('bus_number')->unique();
-            $table->string('bus_name')->nullable();
+    $table->string('bus_type')->default('AC');
 
-            $table->string('bus_type')->default('AC');
+    $table->unsignedSmallInteger('total_seats');
 
-            $table->unsignedSmallInteger('total_seats');
+    $table->boolean('status')->default(true);
 
-            $table->boolean('status')->default(true);
-
-            $table->timestamps();
+    $table->timestamps();
         });
     }
 

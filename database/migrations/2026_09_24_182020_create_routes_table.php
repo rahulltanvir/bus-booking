@@ -11,14 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('bus_operators', function (Blueprint $table) {
-          $table->string('name');
-            $table->string('code')->unique();
+        Schema::create('routes', function (Blueprint $table) {
+            $table->id();
 
-            $table->string('phone')->nullable();
-            $table->string('email')->nullable();
+            $table->string('from');
+            $table->string('to');
 
-            $table->text('address')->nullable();
+            $table->unsignedInteger('distance')->nullable();
+
+            $table->text('description')->nullable();
 
             $table->boolean('status')->default(true);
 
@@ -31,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('bus_operators');
+        Schema::dropIfExists('routes');
     }
 };
