@@ -14,7 +14,7 @@ class BusController extends Controller
     {
         $buses = Bus::latest()->get();
 
-        return view('buses.index', compact('buses'));
+        return view('admin.buses.index', compact('buses'));
     }
 
     /**
@@ -22,7 +22,7 @@ class BusController extends Controller
      */
     public function create()
     {
-        return view('buses.create');
+        return view('admin.buses.create');
     }
 
     /**
@@ -52,7 +52,7 @@ class BusController extends Controller
      */
     public function show(Bus $bus)
     {
-        return view('buses.show', compact('bus'));
+        return view('admin.buses.show', compact('bus'));
     }
 
     /**
@@ -60,7 +60,7 @@ class BusController extends Controller
      */
     public function edit(Bus $bus)
     {
-        return view('buses.edit', compact('bus'));
+        return view('admin.buses.edit', compact('bus'));
     }
 
     /**
