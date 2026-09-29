@@ -94,6 +94,6 @@ class BusController extends Controller
 
         return redirect()
             ->route('buses.index')
-            ->with('success', 'Bus deleted successfully.');
+            ->with('success', 'Bus data deleted successfully.');
     }
 }
