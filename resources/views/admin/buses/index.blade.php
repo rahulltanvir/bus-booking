@@ -136,7 +136,7 @@
 
             <a href="/">Dashboard</a>
             <a href="{{ route('buses.index') }}" class="active">🚌 Buses</a>
-            <a href="#">Routes</a>
+            <a href="{{ route('routes.index') }}">🛣️ Routes</a>
             <a href="#">Trips</a>
             <a href="#">Bookings</a>
             <a href="#">Users</a>
