@@ -1,12 +1,18 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BusController;
-use App\Http\Controllers\RouteController;
 
 Route::get('/', function () {
-    return redirect()->route('buses.index');
+    return redirect()->route('admin.include.master');
 });
 
-Route::resource('buses', BusController::class);
-Route::resource('routes', RouteController::class);
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
