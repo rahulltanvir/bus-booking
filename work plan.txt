@@ -1,0 +1,21 @@
+আমাদের project-এ কীভাবে এগোব?
+আমার পরামর্শ, এই ক্রমে কাজ করি:
+1. Admin authentication — login credentials যাচাই।
+2. Admin middleware — dashboard ও সব admin route সুরক্ষিত করা।
+3. Login rate limiting — বারবার ভুল password আটকানো।
+4. Logout ও session security — নিরাপদে session শেষ করা।
+
+
+তোমার custom Admin Login design রাখব।
+
+
+
+Login যাচাই করতে Laravel-এর Auth ব্যবহার করব।
+
+
+
+is_admin field ও middleware দিয়ে শুধু admin-এর access নিশ্চিত করব।
+
+
+
+Jetstream-এর default login page যেন আমাদের custom page-কে replace না করে, সেটি নিশ্চিত করব।
