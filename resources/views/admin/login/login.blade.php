@@ -175,7 +175,7 @@
                 </div>
             @endif
 
-            <form action="#" method="POST">
+            <form action="{{ route('admin.login.submit') }}" method="POST">
                 @csrf
 
                 <div class="form-group">

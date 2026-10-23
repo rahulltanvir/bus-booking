@@ -7,15 +7,26 @@
 
 
 তোমার custom Admin Login design রাখব।
-
-
-
 Login যাচাই করতে Laravel-এর Auth ব্যবহার করব।
-
-
-
 is_admin field ও middleware দিয়ে শুধু admin-এর access নিশ্চিত করব।
-
-
-
 Jetstream-এর default login page যেন আমাদের custom page-কে replace না করে, সেটি নিশ্চিত করব।
+
+Authentication: সঠিক email ও password ছাড়া login হবে না।
+Admin role: login করা user-এর is_admin অনুমতি যাচাই হবে।
+Middleware: অনুমতি ছাড়া /admin/dashboard, /admin/buses বা অন্য admin route খোলা যাবে না।
+Login protection: বারবার ভুল password দিলে login attempt সীমিত করা হবে।
+Logout: session নিরাপদে শেষ হবে।
+
+
+
+ঠিক আছে 😊 আজকে এখানেই থাক। কাল আবার আমাদের Laravel Bus Booking Project-এর Admin Login থেকে শুরু করব।
+
+এখন পর্যন্ত যা হয়েছে:
+- ✅ Admin account তৈরি হয়েছে
+- ✅ AuthController তৈরি হয়েছে
+- 🔧 Login form-এর POST route ঠিক করা বাকি
+কাল প্রথমে login.blade.php-এর form ঠিক করব, তারপর login পরীক্ষা করে Dashboard-এর কাজ এগিয়ে নেব।
+
+প্রজেক্টের ফোল্ডার: D:\xampp\htdocs\bus-booking
+
+শুভরাত্রি! 🌙 কাল ধাপে ধাপে করব।
