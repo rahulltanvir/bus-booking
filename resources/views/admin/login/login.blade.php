@@ -7,7 +7,7 @@
 
     <title>Admin Login | BusBooking</title>
 
-    <link rel="icon" type="image/png" href="{{ asset('images/favicon.jpg') }}">
+    <link rel="icon" type="image/jpeg" href="{{ asset('bus-logo.jpeg') }}">
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">

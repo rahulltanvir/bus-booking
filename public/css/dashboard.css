@@ -611,3 +611,122 @@
                 padding: 17px;
             }
         }
+
+
+        
+/* Admin User Dropdown */
+.admin-user-dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.user-dropdown-trigger {
+    padding: 7px 10px;
+    border-radius: 12px;
+    transition: background 0.2s ease;
+}
+
+.user-dropdown-trigger:hover {
+    background: #f1f5f9;
+}
+
+.dropdown-arrow {
+    font-size: 10px;
+    color: #94a3b8;
+    transition: transform 0.2s ease;
+}
+
+.admin-user-dropdown:hover .dropdown-arrow,
+.admin-user-dropdown:focus-within .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.admin-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: 235px;
+    padding: 8px;
+    background: #fff;
+    border: 1px solid #e8edf4;
+    border-radius: 14px;
+    box-shadow: 0 15px 40px rgba(15, 23, 42, 0.14);
+    z-index: 1050;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: all 0.2s ease;
+}
+
+.admin-user-dropdown:hover .admin-dropdown-menu,
+.admin-user-dropdown:focus-within .admin-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 12px 10px;
+}
+
+.dropdown-user-info strong {
+    font-size: 12px;
+    color: #0f172a;
+}
+
+.dropdown-user-info small {
+    font-size: 10px;
+    color: #94a3b8;
+    overflow-wrap: anywhere;
+}
+
+.dropdown-divider {
+    height: 1px;
+    background: #eef2f7;
+    margin: 5px 0;
+}
+
+.dropdown-item-custom {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    width: 100%;
+    padding: 11px 10px;
+    border: 0;
+    border-radius: 9px;
+    background: transparent;
+    color: #475569;
+    text-decoration: none;
+    font-size: 12px;
+    text-align: left;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item-custom i {
+    width: 16px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.dropdown-item-custom:hover {
+    background: #f1f5f9;
+    color: #4f46e5;
+}
+
+.logout-item {
+    color: #dc2626;
+    cursor: pointer;
+}
+
+.logout-item:hover {
+    background: #fef2f2;
+    color: #b91c1c;
+}
+
+.admin-dropdown-menu form {
+    margin: 0;
+}
